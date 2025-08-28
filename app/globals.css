@@ -1,0 +1,149 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to honey-themed color palette for light mode */
+  --background: oklch(0.97 0.02 85); /* Cream background */
+  --foreground: oklch(0.3 0.05 45); /* Brown text */
+  --card: oklch(0.95 0.08 85); /* Honey yellow cards */
+  --card-foreground: oklch(0.3 0.05 45); /* Brown card text */
+  --popover: oklch(1 0 0); /* White popovers */
+  --popover-foreground: oklch(0.3 0.05 45); /* Brown popover text */
+  --primary: oklch(0.65 0.15 65); /* Amber primary */
+  --primary-foreground: oklch(1 0 0); /* White on primary */
+  --secondary: oklch(0.8 0.12 75); /* Soft gold secondary */
+  --secondary-foreground: oklch(0.3 0.05 45); /* Brown on secondary */
+  --muted: oklch(0.92 0.06 85); /* Muted honey yellow */
+  --muted-foreground: oklch(0.45 0.04 45); /* Muted brown text */
+  --accent: oklch(0.8 0.12 75); /* Soft gold accent */
+  --accent-foreground: oklch(0.3 0.05 45); /* Brown on accent */
+  --destructive: oklch(0.55 0.2 25); /* Red for errors */
+  --destructive-foreground: oklch(1 0 0); /* White on destructive */
+  --border: oklch(0.65 0.15 65); /* Amber borders */
+  --input: oklch(1 0 0); /* White inputs */
+  --ring: oklch(0.8 0.12 75); /* Soft gold focus rings */
+  --chart-1: oklch(0.9 0.08 85); /* Honey yellow charts */
+  --chart-2: oklch(0.65 0.15 65); /* Amber charts */
+  --chart-3: oklch(0.3 0.05 45); /* Brown charts */
+  --chart-4: oklch(0.8 0.12 75); /* Soft gold charts */
+  --chart-5: oklch(0.97 0.02 85); /* Cream charts */
+  --radius: 0.5rem;
+  --sidebar: oklch(1 0 0); /* White sidebar */
+  --sidebar-foreground: oklch(0.3 0.05 45); /* Brown sidebar text */
+  --sidebar-primary: oklch(0.9 0.08 85); /* Honey yellow sidebar primary */
+  --sidebar-primary-foreground: oklch(0.3 0.05 45); /* Brown sidebar primary text */
+  --sidebar-accent: oklch(0.8 0.12 75); /* Soft gold sidebar accent */
+  --sidebar-accent-foreground: oklch(0.3 0.05 45); /* Brown sidebar accent text */
+  --sidebar-border: oklch(0.65 0.15 65); /* Amber sidebar borders */
+  --sidebar-ring: oklch(0.8 0.12 75); /* Soft gold sidebar rings */
+}
+
+.dark {
+  /* Updated to honey-themed dark mode with rich browns and golds */
+  --background: oklch(0.15 0.02 45); /* Dark brown background */
+  --foreground: oklch(0.95 0.02 85); /* Cream text */
+  --card: oklch(0.2 0.03 45); /* Dark brown cards */
+  --card-foreground: oklch(0.95 0.02 85); /* Cream card text */
+  --popover: oklch(0.18 0.02 45); /* Dark brown popovers */
+  --popover-foreground: oklch(0.95 0.02 85); /* Cream popover text */
+  --primary: oklch(0.8 0.12 75); /* Soft gold primary in dark mode */
+  --primary-foreground: oklch(0.15 0.02 45); /* Dark brown on primary */
+  --secondary: oklch(0.25 0.04 45); /* Dark brown secondary */
+  --secondary-foreground: oklch(0.95 0.02 85); /* Cream on secondary */
+  --muted: oklch(0.25 0.04 45); /* Muted dark brown */
+  --muted-foreground: oklch(0.7 0.04 65); /* Muted amber text */
+  --accent: oklch(0.65 0.15 65); /* Amber accent in dark mode */
+  --accent-foreground: oklch(0.95 0.02 85); /* Cream on accent */
+  --destructive: oklch(0.45 0.18 25); /* Darker red for errors */
+  --destructive-foreground: oklch(0.95 0.02 85); /* Cream on destructive */
+  --border: oklch(0.25 0.04 45); /* Dark brown borders */
+  --input: oklch(0.25 0.04 45); /* Dark brown inputs */
+  --ring: oklch(0.65 0.15 65); /* Amber focus rings */
+  --chart-1: oklch(0.8 0.12 75); /* Soft gold charts */
+  --chart-2: oklch(0.65 0.15 65); /* Amber charts */
+  --chart-3: oklch(0.9 0.08 85); /* Honey yellow charts */
+  --chart-4: oklch(0.45 0.08 55); /* Darker amber charts */
+  --chart-5: oklch(0.35 0.06 50); /* Medium brown charts */
+  --sidebar: oklch(0.12 0.02 45); /* Darker brown sidebar */
+  --sidebar-foreground: oklch(0.95 0.02 85); /* Cream sidebar text */
+  --sidebar-primary: oklch(0.8 0.12 75); /* Soft gold sidebar primary */
+  --sidebar-primary-foreground: oklch(0.15 0.02 45); /* Dark brown sidebar primary text */
+  --sidebar-accent: oklch(0.25 0.04 45); /* Dark brown sidebar accent */
+  --sidebar-accent-foreground: oklch(0.95 0.02 85); /* Cream sidebar accent text */
+  --sidebar-border: oklch(0.25 0.04 45); /* Dark brown sidebar borders */
+  --sidebar-ring: oklch(0.65 0.15 65); /* Amber sidebar rings */
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Added custom honey-themed utility classes */
+@layer utilities {
+  .text-honey {
+    color: oklch(0.9 0.08 85);
+  }
+  .text-amber {
+    color: oklch(0.65 0.15 65);
+  }
+  .bg-honey {
+    background-color: oklch(0.9 0.08 85);
+  }
+  .bg-amber {
+    background-color: oklch(0.65 0.15 65);
+  }
+  .border-honey {
+    border-color: oklch(0.9 0.08 85);
+  }
+  .border-amber {
+    border-color: oklch(0.65 0.15 65);
+  }
+}
