@@ -35,7 +35,7 @@ export default function MediaPage() {
       <PhotoGallery />
       <TrainingSection />
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

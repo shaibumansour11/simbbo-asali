@@ -31,7 +31,7 @@ export default function ProductsPage() {
 
       <ProductGrid />
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
