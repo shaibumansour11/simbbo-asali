@@ -10,7 +10,7 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navigation />
+      {/* <Navigation /> */}
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-background via-card to-secondary/20">
